@@ -1,0 +1,194 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.55;
+  color: #1c1c1c;
+  background: #fff;
+}
+
+/* Split shell: photo column + content column */
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+@media (min-width: 52rem) {
+  .shell {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+/* Photo fills top banner (mobile) or left rail (desktop) */
+.photo-panel {
+  position: relative;
+  flex-shrink: 0;
+  min-height: 32vh;
+  background: #0d0d0d;
+}
+
+@media (min-width: 52rem) {
+  .photo-panel {
+    width: min(42vw, 26rem);
+    min-height: 100dvh;
+  }
+}
+
+.photo-panel__img {
+  display: block;
+  width: 100%;
+  min-height: 32vh;
+  max-height: 44vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (min-width: 52rem) {
+  .photo-panel__img {
+    position: absolute;
+    inset: 0;
+    max-height: none;
+    min-height: 0;
+    height: 100%;
+  }
+}
+
+/* Text + links */
+.content-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1.75rem, 5vw, 3rem) clamp(1.25rem, 5vw, 3.5rem);
+  max-width: 36rem;
+}
+
+@media (min-width: 52rem) {
+  .content-panel {
+    padding-block: clamp(2rem, 6vh, 4rem);
+  }
+}
+
+.content-panel__name {
+  margin: 0 0 0.05rem;
+  font-size: clamp(1.85rem, 4.5vw, 2.35rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+.content-panel__location {
+  margin: 0 0 0.65rem;
+  font-size: 0.6875rem;
+  font-weight: 400;
+  color: #b8b8b8;
+  letter-spacing: 0.06em;
+}
+
+.content-panel__bio {
+  margin: 0 0 2rem;
+  font-size: 1.0625rem;
+  color: #3d3d3d;
+  max-width: 34em;
+}
+
+.content-panel__heading {
+  margin: 0 0 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+}
+
+.content-panel__nav {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link-list li + li {
+  margin-top: 0.4rem;
+}
+
+a {
+  color: #0d47a1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1.05rem;
+}
+
+.social-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+.social-icon--email {
+  -webkit-mask-image: url("icons/email.svg");
+  mask-image: url("icons/email.svg");
+}
+
+.social-icon--linkedin {
+  -webkit-mask-image: url("icons/linkedin.svg");
+  mask-image: url("icons/linkedin.svg");
+}
+
+.social-icon--github {
+  -webkit-mask-image: url("icons/github.svg");
+  mask-image: url("icons/github.svg");
+}
+
+.social-icon--instagram {
+  -webkit-mask-image: url("icons/instagram.svg");
+  mask-image: url("icons/instagram.svg");
+}
+
+.social-icon--facebook {
+  -webkit-mask-image: url("icons/facebook.svg");
+  mask-image: url("icons/facebook.svg");
+}
+
+.social-icon--mastodon {
+  -webkit-mask-image: url("icons/mastodon.svg");
+  mask-image: url("icons/mastodon.svg");
+}
+
+.social-icon--strava {
+  -webkit-mask-image: url("icons/strava.svg");
+  mask-image: url("icons/strava.svg");
+}
