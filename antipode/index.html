@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore any point on Earth and its antipode with synchronized side-by-side maps."
+    />
+    <title>Antipode</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="/antipode/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Linked antipode explorer</p>
+          <h1>Antipode</h1>
+        </div>
+        <p class="intro">
+          Pan or zoom either map. The left map stays centered on the selected
+          point, and the right map mirrors its antipode.
+        </p>
+      </header>
+
+      <section class="map-grid" aria-label="Linked maps">
+        <article class="map-panel">
+          <div class="map-label">
+            <span>Selected point</span>
+            <code id="primary-coords">0.0000, 0.0000</code>
+          </div>
+          <div class="map-frame">
+            <div id="map-primary" class="map" aria-label="Selected point map"></div>
+            <div class="center-pin" aria-hidden="true"></div>
+          </div>
+        </article>
+
+        <article class="map-panel">
+          <div class="map-label">
+            <span>Antipode</span>
+            <code id="antipode-coords">0.0000, 180.0000</code>
+          </div>
+          <div class="map-frame">
+            <div id="map-antipode" class="map" aria-label="Antipode map"></div>
+            <div class="center-pin center-pin--antipode" aria-hidden="true"></div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="/antipode/script.js"></script>
+  </body>
+</html>

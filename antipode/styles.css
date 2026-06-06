@@ -1,0 +1,173 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.55;
+  color: #1c1c1c;
+  background: #fff;
+}
+
+.page-shell {
+  width: min(96rem, calc(100% - 2.5rem));
+  margin: 0 auto;
+  padding: 1.75rem 0 2rem;
+}
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.85rem, 4.5vw, 2.35rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.intro {
+  margin: 0;
+  max-width: 34rem;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #3d3d3d;
+}
+
+.map-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 60rem) {
+  .map-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.map-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.map-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.map-label span {
+  font-weight: 600;
+}
+
+.map-label code {
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #3d3d3d;
+  background: transparent;
+}
+
+.map-frame {
+  position: relative;
+  overflow: hidden;
+  min-height: 70vh;
+  border: 1px solid #e4e4e4;
+  border-radius: 0;
+  background: #fff;
+}
+
+.map {
+  height: 100%;
+  min-height: 70vh;
+}
+
+.center-pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.9rem;
+  height: 0.9rem;
+  z-index: 500;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.center-pin::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 0.9rem;
+  background: #c5532d;
+  transform: translate(-50%, -50%);
+}
+
+.center-pin::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.9rem;
+  height: 1px;
+  transform: translate(-50%, -50%);
+  background: #c5532d;
+}
+
+.center-pin--antipode::before {
+  background: #2f6a88;
+}
+
+.center-pin--antipode::after {
+  background: #2f6a88;
+}
+
+.leaflet-container {
+  font: inherit;
+  background: #d9e6e2;
+}
+
+.leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+@media (max-width: 59.999rem) {
+  .page-shell {
+    width: min(100% - 1.5rem, 96rem);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .map-frame,
+  .map {
+    min-height: 44vh;
+  }
+}
