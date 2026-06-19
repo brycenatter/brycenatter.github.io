@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# AI and LLM crawler guidance
+Sitemap: https://natter.fun/llms.txt
