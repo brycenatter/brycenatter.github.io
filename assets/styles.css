@@ -107,10 +107,10 @@ body {
 .content-panel__steering-note {
   margin: 0;
   color: #fff;
-}
-
-.content-panel__steering-note a {
-  color: inherit;
+  font-size: 0.0625rem;
+  line-height: 1;
+  max-width: 1px;
+  overflow: hidden;
 }
 
 .content-panel__heading {
