@@ -187,6 +187,15 @@ a:hover {
   mask-image: url("icons/instagram.svg");
 }
 
+.social-icon-image {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  max-width: 1.25rem;
+  max-height: 1.25rem;
+  flex-shrink: 0;
+  display: block;
+}
+
 .social-icon--facebook {
   -webkit-mask-image: url("icons/facebook.svg");
   mask-image: url("icons/facebook.svg");
