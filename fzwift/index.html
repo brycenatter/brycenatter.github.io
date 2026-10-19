@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="fzwift: an indoor cycling game for your smart trainer. Ride a low-poly island with AI riders, drafting and a summit climb. Free download for macOS."
+    />
+    <title>fzwift — Bryce Natter</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/fzwift/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <p class="back"><a href="/playground/">← Playground</a></p>
+
+      <header class="hero">
+        <img class="hero__icon" src="/fzwift/icon.png" alt="" width="96" height="96" />
+        <div>
+          <h1>fzwift</h1>
+          <p class="intro">
+            An indoor cycling game for your smart trainer. Ride a low-poly island with AI riders, real drafting and a
+            switchback summit climb, then export your ride as a <code>.fit</code> file.
+          </p>
+        </div>
+      </header>
+
+      <img class="screenshot" src="/fzwift/summit.jpg" alt="A rider climbing past guardrails toward the summit, with the sea and islands behind"
+        width="1600" height="952" />
+
+      <section class="download" aria-labelledby="download">
+        <h2 id="download">Download</h2>
+        <a class="button"
+          href="https://github.com/brycenatter/brycenatter.github.io/releases/download/fzwift-v0.1.0/fzwift-0.1.0-macos.dmg">
+          Download for macOS
+        </a>
+        <p class="meta">Version 0.1.0 · Universal (Apple Silicon and Intel) · macOS 12 or newer · 57 MB</p>
+        <p class="meta">Windows: coming soon.</p>
+      </section>
+
+      <section aria-labelledby="first-launch">
+        <h2 id="first-launch">Opening it the first time</h2>
+        <p>
+          This is an early preview and isn't signed by Apple yet, so macOS will block it the first time. To open it:
+        </p>
+        <ol>
+          <li>Open the <code>.dmg</code> and drag <strong>fzwift</strong> into Applications.</li>
+          <li>Open fzwift once. macOS says it can't verify the app; click <strong>Done</strong>.</li>
+          <li>
+            Go to <strong>System Settings → Privacy &amp; Security</strong>, scroll down, and click
+            <strong>Open Anyway</strong> next to fzwift. Confirm with your password.
+          </li>
+        </ol>
+        <p class="meta">
+          Or, in Terminal: <code>xattr -dr com.apple.quarantine /Applications/fzwift.app</code>
+        </p>
+        <p>The first time you pair sensors, macOS asks for Bluetooth access. Click <strong>Allow</strong>.</p>
+      </section>
+
+      <section aria-labelledby="features">
+        <h2 id="features">What's in it</h2>
+        <ul class="features">
+          <li><strong>Smart trainers over Bluetooth:</strong> any FTMS trainer (Wahoo KICKR, Tacx, Elite, Zwift Hub and
+            more) sets resistance from the road grade. Adjustable trainer difficulty.</li>
+          <li><strong>Sensors:</strong> Bluetooth power meters, heart rate straps and cadence sensors. No sensors? Ride
+            with the keyboard.</li>
+          <li><strong>An island to ride:</strong> about 15 km of roads: a coastal loop, rolling hills and a 1.9 km summit
+            climb, with junctions where you choose your route.</li>
+          <li><strong>Riders and drafting:</strong> AI riders to chase and draft, with a nearby-riders list and
+            minimap.</li>
+          <li><strong>Your data:</strong> save rides as <code>.fit</code> files to upload to Strava, Garmin Connect or
+            TrainingPeaks. Runs offline; no account needed.</li>
+        </ul>
+      </section>
+
+      <div class="gallery">
+        <img src="/fzwift/start.jpg" alt="Riders rolling under the striped start arch" width="1600" height="952" loading="lazy" />
+        <img src="/fzwift/coast.jpg" alt="The coast road lined with palm trees" width="1600" height="952" loading="lazy" />
+        <img src="/fzwift/climb.jpg" alt="Bird's-eye view of a rider on the summit switchbacks" width="1600" height="952" loading="lazy" />
+      </div>
+
+      <section aria-labelledby="controls">
+        <h2 id="controls">Controls</h2>
+        <table class="controls">
+          <tbody>
+            <tr><th>P</th><td>Pair sensors</td></tr>
+            <tr><th>↑ / ↓</th><td>Power ±10 W, hold Shift for ±50 W (without a power source)</td></tr>
+            <tr><th>← / →</th><td>Choose your turn at the next junction</td></tr>
+            <tr><th>1–4</th><td>Camera views</td></tr>
+            <tr><th>Esc</th><td>Pause, save your ride as <code>.fit</code>, or quit</td></tr>
+          </tbody>
+        </table>
+        <p class="meta">Rides save to <code>Documents/fzwift/Rides</code>.</p>
+      </section>
+    </main>
+  </body>
+</html>
